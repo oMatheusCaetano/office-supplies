@@ -1,23 +1,18 @@
 <template>
-  <div
-    class="carousel slide"
-    id="indicators"
-    data-ride="carousel"
-  >
+  <div class="carousel slide" id="indicators" data-ride="carousel">
     <ol class="carousel-indicators">
       <li
         data-target="#indicators"
-        :class="{ active: index === 0}"
+        :class="{ active: index === 0 }"
         :data-slide-to="index"
         :key="index"
         v-for="(product, index) in products"
-      >
-      </li>
+      ></li>
     </ol>
     <div class="carousel-inner">
       <div
         class="carousel-item"
-        :class="{ active: index === 0}"
+        :class="{ active: index === 0 }"
         v-for="(product, index) in products"
         :key="index"
       >
@@ -28,7 +23,12 @@
             :alt="product.imagePath"
           />
 
-          <os-details-card class="col-md-7 h-50 pb-5" :darkTheme="true" :product="product" />
+          <os-details-card
+            class="col-md-7 h-50 pb-5"
+            :darkTheme="true"
+            :product="product"
+            buttonType="buy"
+          />
         </div>
       </div>
     </div>

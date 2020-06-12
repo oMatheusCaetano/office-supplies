@@ -22,11 +22,13 @@
         <div v-if="product.name === currentSpace">
           <div class="d-flex flex-wrap">
             <img
-              class="col-12 col-lg-7"
+              class="col-12 col-lg-7 h-25"
               :src="product.imagePath"
               alt="cabinets"
             />
-            <os-details-card class="col-12 col-lg-5" :product="product" />
+            <os-details-card class="col-12 col-lg-5" :product="product" buttonType="explore">
+              <h3 class="text-uppercase border-bottom pb-3 text-dark-yellow">Series</h3>
+            </os-details-card>
           </div>
         </div>
       </transition>
@@ -57,9 +59,5 @@ export default {
 <style scoped>
 a {
   cursor: pointer;
-}
-
-img {
-  height: 500px;
 }
 </style>
