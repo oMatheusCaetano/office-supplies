@@ -13,26 +13,20 @@
       <li data-target="#indicators" data-slide-to="1"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item active">
+      <div
+        class="carousel-item"
+        :class="{ active: index === 0}"
+        v-for="(product, index) in products"
+        :key="index"
+      >
         <div class="d-flex flex-wrap align-items-center bg-dark">
           <img
-            class="img d-block mx-auto "
-            src="../assets/slide/ergonomic-chair.png"
-            alt="ergonomic-chair"
+            class="img d-block mx-auto"
+            :src="product.imagePath"
+            :alt="product.imagePath"
           />
 
-          <os-details-card class="col-md-7 h-50 pb-5" :darkTheme="true" />
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="d-flex flex-wrap align-items-center bg-dark">
-          <img
-            class="img col-12 col-md-4 d-block mx-auto"
-            src="../assets/slide/writing-desk.png"
-            alt="writing-desk"
-          />
-
-          <os-details-card class="col-md-7 h-50 pb-5" :darkTheme="true" />
+          <os-details-card class="col-md-7 h-50 pb-5" :darkTheme="true" :product="product" />
         </div>
       </div>
     </div>
@@ -62,7 +56,10 @@ export default {
   components: {
     OsDetailsCard,
   },
+  computed: {
+    products() {
+      return this.$store.state.carouselItems
+    },
+  },
 }
 </script>
-
-<style></style>

@@ -1,15 +1,14 @@
 <template>
   <div class="text-center">
-    <p class="text-uppercase" :class="{ 'text-white': darkTheme }">Modern chair</p>
+    <p class="text-uppercase" :class="{ 'text-white': darkTheme }">{{ product.type }}</p>
     <h3 class="text-uppercase font-weight-bold" :class="{ 'text-white': darkTheme }">
-      Ergonomic Chair
+      {{ product.name }}
     </h3>
-    <h4 class="text-center">
-      <span :class="{ 'text-warning': darkTheme }">$99,00</span>
+    <h4 class="text-center font-weight-bold">
+      <span :class="{ 'text-warning': darkTheme }">${{ product.price }}</span>
     </h4>
     <p :class="darkTheme ? 'text-white' : 'text-secondary'">
-      A brand new office should always start with comfort, then you can jump to
-      other accomodations
+      {{ product.description }}
     </p>
     <div>
       <button
@@ -25,6 +24,6 @@
 <script>
 
 export default {
-  props: ['darkTheme'],
+  props: ['darkTheme', 'product'],
 }
 </script>
