@@ -1,0 +1,17 @@
+$theme-colors: (
+  "dark-yellow": #af910c,
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.h6 {
+  font-size: 15px;
+}
+
+.text-black {
+  color: #000 !important;
+
+  &:hover {
+    color: $dark !important;
+  }
+}

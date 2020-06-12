@@ -1,28 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <os-navbar />
+
+    <div class="d-flex flex-wrap align-items-center bg-light">
+      <img
+        class="col-10 col-md-3 d-block mx-auto"
+        src="./assets/slide/ergonomic-chair.png"
+        alt="ergonomic-chair"
+      />
+
+      <os-details-card class="col-md-7 h-50" />
+    </div>
+          <img
+        class="col-10 col-md-3 d-block mx-auto"
+        src="./assets/slide/ergonomic-chair.png"
+        alt="ergonomic-chair"
+      />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import OsNavbar from './components/OsNavbar.vue'
+import OsDetailsCard from './components/OsDetailsCard.vue'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
+    OsNavbar,
+    OsDetailsCard,
+  },
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
