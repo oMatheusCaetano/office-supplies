@@ -6,11 +6,13 @@
   >
     <ol class="carousel-indicators">
       <li
-        class="active"
         data-target="#indicators"
-        data-slide-to="0">
+        :class="{ active: index === 0}"
+        :data-slide-to="index"
+        :key="index"
+        v-for="(product, index) in products"
+      >
       </li>
-      <li data-target="#indicators" data-slide-to="1"></li>
     </ol>
     <div class="carousel-inner">
       <div
