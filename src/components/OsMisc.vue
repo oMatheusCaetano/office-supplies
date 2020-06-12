@@ -1,7 +1,7 @@
 <template>
   <div class="p-5">
     <h2 class="text-uppercase text-center my-3 ">Miscellanous</h2>
-    <hr />
+    <hr>
     <div class="row">
       <div
         class="my-4 mx-auto col-12 col-md-5 col-lg-4 text-center"
