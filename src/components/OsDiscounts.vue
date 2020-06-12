@@ -14,10 +14,6 @@
   </div>
 </template>
 
-<script>
-export default {}
-</script>
-
 <style>
 .box {
   border: 3px solid gray;

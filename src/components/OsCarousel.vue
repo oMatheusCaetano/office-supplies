@@ -20,7 +20,7 @@
           <img
             class="img d-block mx-auto"
             :src="product.imagePath"
-            :alt="product.imagePath"
+            alt="product-image"
           />
 
           <os-details-card

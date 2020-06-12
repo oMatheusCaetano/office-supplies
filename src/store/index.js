@@ -67,5 +67,24 @@ export default new Vuex.Store({
         imagePath: require('../assets/misc/lamp-3.png'),
       },
     ],
+
+    footerOptions: [
+      {
+        title: 'Office Supplies',
+        list: ['About Us', 'Contact Us', 'News', 'Store'],
+      },
+      {
+        title: 'Collections',
+        list: ['Chairs', 'Desks', 'Lamps', 'Other'],
+      },
+      {
+        title: 'Extras',
+        list: ['Brands', 'Gift Card', 'Affiliates', 'Special'],
+      },
+      {
+        title: 'My Account',
+        list: ['My Account', 'History', 'Wishlist', 'Newsletter'],
+      },
+    ],
   },
 })

@@ -19,13 +19,15 @@
       v-for="product in products"
       :key="product.name"
     >
-      <transition
-        enter-active-class="animate__animated animate__fadeIn"
-      >
+      <transition enter-active-class="animate__animated animate__fadeIn">
         <div v-if="product.name === currentSpace">
           <div class="d-flex flex-wrap">
             <div class="col-12 col-lg-7">
-              <img class="col-auto h-auto" :src="product.imagePath" alt="cabinets" />
+              <img
+                class="col-auto h-auto"
+                :src="product.imagePath"
+                alt="product-image"
+              />
             </div>
             <os-details-card
               class="col-12 col-lg-5"

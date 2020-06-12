@@ -5,6 +5,7 @@
     <os-space-selector />
     <os-misc />
     <os-discounts />
+    <os-footer />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import OsCarousel from './components/OsCarousel.vue'
 import OsSpaceSelector from './components/OsSpaceSelector.vue'
 import OsMisc from './components/OsMisc.vue'
 import OsDiscounts from './components/OsDiscounts.vue'
+import OsFooter from './components/OsFooter.vue'
 
 export default {
   components: {
@@ -22,6 +24,7 @@ export default {
     OsSpaceSelector,
     OsMisc,
     OsDiscounts,
+    OsFooter,
   },
 }
 </script>
