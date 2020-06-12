@@ -4,7 +4,7 @@
     <h3 class="text-uppercase font-weight-bold" :class="{ 'text-white': darkTheme }">
       {{ product.name }}
     </h3>
-    <h4 class="text-center font-weight-bold">
+    <h4 class="text-center font-weight-bold" v-if="product.price">
       <span :class="{ 'text-warning': darkTheme }">${{ product.price }}</span>
     </h4>
     <p :class="darkTheme ? 'text-white' : 'text-secondary'">

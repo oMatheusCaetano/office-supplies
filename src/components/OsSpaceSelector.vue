@@ -1,0 +1,54 @@
+<template>
+  <div class="bg-light px-1 p-md-3">
+    <h2 class="text-uppercase text-center py-4">Spaces</h2>
+    <div class="d-flex justify-content-around pb-4">
+      <a
+        class="text-uppercase h6"
+        :class="{ 'p-2 border border-dark-yellow': product.name === currentSpace }"
+        v-for="(product, index) in products"
+        :key="index"
+        @click="currentSpace = product.name"
+      >
+        {{ product.name }}
+      </a>
+    </div>
+    <div v-for="product in products" :key="product.name">
+      <div v-if="product.name === currentSpace">
+        <div class="d-flex flex-wrap">
+          <img class="col-12 col-lg-7" :src="product.imagePath" alt="cabinets" />
+          <os-details-card class="col-12 col-lg-5" :product="product" />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import OsDetailsCard from './OsDetailsCard.vue'
+
+export default {
+  components: {
+    OsDetailsCard,
+  },
+
+  data: () => ({
+    currentSpace: 'Warnock',
+  }),
+
+  computed: {
+    products() {
+      return this.$store.state.spacesItems
+    },
+  },
+}
+</script>
+
+<style scoped>
+a {
+  cursor: pointer;
+}
+
+img {
+  height: 500px;
+}
+</style>
