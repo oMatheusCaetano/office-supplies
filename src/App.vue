@@ -1,10 +1,16 @@
 <template>
-  <div>
+  <div id="home">
     <os-navbar />
-    <os-carousel />
-    <os-space-selector />
-    <os-misc />
-    <os-discounts />
+    <os-carousel class="pt-5" />
+    <div id="spaces">
+      <os-space-selector />
+    </div>
+    <div id="misc">
+      <os-misc />
+    </div>
+    <div id="discounts">
+      <os-discounts />
+    </div>
     <os-footer />
   </div>
 </template>
