@@ -4,7 +4,9 @@
     <div class="d-flex justify-content-around pb-4">
       <a
         class="text-uppercase h6"
-        :class="{ 'p-2 border border-dark-yellow': product.name === currentSpace }"
+        :class="{
+          'p-2 border border-dark-yellow': product.name === currentSpace,
+        }"
         v-for="(product, index) in products"
         :key="index"
         @click="currentSpace = product.name"
@@ -13,12 +15,21 @@
       </a>
     </div>
     <div v-for="product in products" :key="product.name">
-      <div v-if="product.name === currentSpace">
-        <div class="d-flex flex-wrap">
-          <img class="col-12 col-lg-7" :src="product.imagePath" alt="cabinets" />
-          <os-details-card class="col-12 col-lg-5" :product="product" />
+      <transition
+        enter-active-class="animate__animated animate__fadeInLeft position-absolute bg-light"
+        leave-active-class="animate__animated animate__fadeOutRight position-absolute bg-light"
+      >
+        <div v-if="product.name === currentSpace">
+          <div class="d-flex flex-wrap">
+            <img
+              class="col-12 col-lg-7"
+              :src="product.imagePath"
+              alt="cabinets"
+            />
+            <os-details-card class="col-12 col-lg-5" :product="product" />
+          </div>
         </div>
-      </div>
+      </transition>
     </div>
   </div>
 </template>

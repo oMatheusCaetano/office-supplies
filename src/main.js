@@ -3,6 +3,8 @@ import App from './App.vue'
 import store from './store'
 import 'bootstrap'
 
+require('animate.css')
+
 Vue.config.productionTip = false
 
 new Vue({
