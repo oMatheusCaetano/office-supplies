@@ -11002,4 +11002,9 @@ a.text-dark-yellow:hover, a.text-dark-yellow:focus {
 .img {
   height: 500px;
 }
+
+.form-control {
+  border-radius: 2px;
+  background-color: #e2e2e2;
+}
 /*# sourceMappingURL=style.css.map */

@@ -25,7 +25,7 @@
             <a class="nav-link text-black" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-black" href="#">Featured</a>
+            <a class="nav-link text-black" href="#">Spaces</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-black" href="#">Miscellaneous</a>

@@ -1,10 +1,10 @@
 <template>
-  <div id="app">
+  <div>
     <os-navbar />
     <os-carousel />
-    <div class="p-2 p-md-4">
-      <os-space-selector />
-    </div>
+    <os-space-selector />
+    <os-misc />
+    <os-discounts />
   </div>
 </template>
 
@@ -12,12 +12,16 @@
 import OsNavbar from './components/OsNavbar.vue'
 import OsCarousel from './components/OsCarousel.vue'
 import OsSpaceSelector from './components/OsSpaceSelector.vue'
+import OsMisc from './components/OsMisc.vue'
+import OsDiscounts from './components/OsDiscounts.vue'
 
 export default {
   components: {
     OsNavbar,
     OsCarousel,
     OsSpaceSelector,
+    OsMisc,
+    OsDiscounts,
   },
 }
 </script>

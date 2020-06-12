@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light px-1 p-md-3">
+  <div class="bg-light p-md-4 pb-5">
     <h2 class="text-uppercase text-center py-4">Spaces</h2>
     <div class="d-flex justify-content-around pb-4">
       <a
@@ -14,20 +14,27 @@
         {{ product.name }}
       </a>
     </div>
-    <div v-for="product in products" :key="product.name">
+    <div
+      class="position-relative pb-lg-3"
+      v-for="product in products"
+      :key="product.name"
+    >
       <transition
-        enter-active-class="animate__animated animate__fadeInLeft position-absolute bg-light"
-        leave-active-class="animate__animated animate__fadeOutRight position-absolute bg-light"
+        enter-active-class="animate__animated animate__fadeIn"
       >
         <div v-if="product.name === currentSpace">
           <div class="d-flex flex-wrap">
-            <img
-              class="col-12 col-lg-7 h-25"
-              :src="product.imagePath"
-              alt="cabinets"
-            />
-            <os-details-card class="col-12 col-lg-5" :product="product" buttonType="explore">
-              <h3 class="text-uppercase border-bottom pb-3 text-dark-yellow">Series</h3>
+            <div class="col-12 col-lg-7">
+              <img class="col-auto h-auto" :src="product.imagePath" alt="cabinets" />
+            </div>
+            <os-details-card
+              class="col-12 col-lg-5"
+              :product="product"
+              buttonType="explore"
+            >
+              <h3 class="text-uppercase border-bottom pb-3 text-dark-yellow">
+                Series
+              </h3>
             </os-details-card>
           </div>
         </div>
