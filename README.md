@@ -1,4 +1,6 @@
-# office-supplies
+# Office Supplies
+
+## Screenshots
 
 ## Project setup
 ```

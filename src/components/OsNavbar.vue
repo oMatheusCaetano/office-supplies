@@ -43,9 +43,6 @@
             >Discounts</a
           >
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-black" href="#">About</a>
-        </li>
       </ul>
     </div>
   </nav>
