@@ -1,5 +1,5 @@
 <template>
-  <div class="p-5">
+  <div class="p-5" id="misc">
     <h2 class="text-uppercase text-center my-3 ">Miscellanous</h2>
     <hr>
     <div class="row">

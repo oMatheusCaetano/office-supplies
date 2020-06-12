@@ -31,3 +31,9 @@ export default {
   props: ['list'],
 }
 </script>
+
+<style scoped>
+img {
+  height: 30px;
+}
+</style>

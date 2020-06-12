@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light p-md-4 pb-5">
+  <div class="bg-light p-md-4 pb-5" id="spaces">
     <h2 class="text-uppercase text-center py-4">Spaces</h2>
     <div class="d-flex justify-content-around pb-4">
       <a

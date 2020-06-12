@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-light border-bottom border-dark">
+  <div class="bg-light border-bottom border-dark" id="home">
     <nav class="navbar navbar-expand-lg navbar-light py-3 container">
       <a class="navbar-brand d-flex align-items-center" href="/">
-        <img src="../assets/logo.png" alt="logo-image">
+        <img src="../assets/logo.png" alt="logo-image" />
         <h1 class="text-uppercase h4 ml-2">
           <span class="font-weight-bold mr-2">Office</span>
           <span class="text-dark-yellow">Supplies</span>
@@ -19,16 +19,22 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse text-uppercase justify-content-end" id="navbarNav">
+      <div
+        class="collapse navbar-collapse text-uppercase justify-content-end"
+        id="navbarNav"
+      >
         <ul class="navbar-nav h6">
           <li class="nav-item">
-            <a class="nav-link text-black" href="#">Home</a>
+            <a class="nav-link text-black" href="#home" v-smooth-scroll>Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-black" href="#">Spaces</a>
+            <a class="nav-link text-black" href="#spaces" v-smooth-scroll>Spaces</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-black" href="#">Miscellaneous</a>
+            <a class="nav-link text-black" href="#misc" v-smooth-scroll>Miscellaneous</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#discounts" v-smooth-scroll>Discounts</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-black" href="#">About</a>
